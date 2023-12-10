@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="Button" onclick="getFetch()">Click me</button>
+    <script>
+   
+       const  getFetch = async()=>{
+          const data = await fetch(`http://hn.algolia.com/api/v1/search?query=html`);
+          const result = await data.json();
+          console.log(result.hits);
+       }
+    </script>
+</body>
+</html>
